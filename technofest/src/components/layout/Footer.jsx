@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { Globe, Mail, MessageCircle, Users } from "lucide-react";
+import {
+  Globe,
+  Mail,
+  MessageCircle,
+  Users,
+} from "lucide-react";
 
 const footerLinks = {
   Platform: [
@@ -38,7 +43,7 @@ export default function Footer() {
             <div className="mt-5 flex gap-2">
               <a
                 href="#"
-                aria-label="Website"
+                aria-label="Community"
                 className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-maroon-700"
               >
                 <Globe size={18} />
@@ -46,7 +51,7 @@ export default function Footer() {
 
               <a
                 href="#"
-                aria-label="Community"
+                aria-label="Updates"
                 className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-maroon-700"
               >
                 <MessageCircle size={18} />

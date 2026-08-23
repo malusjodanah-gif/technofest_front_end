@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "tailwindcss";
 
 @theme {
@@ -22,8 +26,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fdfcf9;
 }
 
 #root {
