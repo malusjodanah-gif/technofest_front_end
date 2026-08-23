@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
+import Home from "../components/public/Home";
 import Login from "../pages/public/auth/Login";
 import Signup from "../pages/public/auth/Signup";
 
@@ -27,7 +28,7 @@ export default function AppRoutes() {
   return (
     <Routes>
       {/* PUBLIC */}
-      <Route path="/" element={<Placeholder title="Home" />} />
+      <Route path="/" element={<Home />} />
       <Route
         path="/explore"
         element={<Placeholder title="Explore" />}

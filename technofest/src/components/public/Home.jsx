@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 
-import {
-  CategorySection,
-  FeaturedProjects,
-  Hero,
-  SponsorSection,
-  StatsSection,
-} from "../../components/public";
+import CategorySection from "./CategorySection";
+import FeaturedProjects from "./FeaturedProjects";
+import Hero from "./Hero";
+import SponsorSection from "./SponsorSection";
+import StatsSection from "./StatsSection";
 
 import { PublicLayout } from "../../components/layout";
 
