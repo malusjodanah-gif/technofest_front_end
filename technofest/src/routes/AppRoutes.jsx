@@ -13,6 +13,32 @@ import Login from "../pages/public/auth/Login";
 import Signup from "../pages/public/auth/Signup";
 import ForgotPassword from "../pages/public/auth/ForgotPassword";
 
+import DashboardLayout from "../components/layout/DashboardLayout";
+import {
+  adminNavigation,
+  mentorNavigation,
+  organizationNavigation,
+} from "../constants/navigation";
+
+import OrganizationDashboard from "../pages/organization/Dashboard";
+import ExploreProjects from "../pages/organization/ExploreProjects";
+import SavedProjects from "../pages/organization/SavedProjects";
+import OrganizationProfile from "../pages/organization/Profile";
+import Internships from "../pages/organization/Internships";
+import Partnerships from "../pages/organization/Partnerships";
+
+import MentorDashboard from "../pages/mentor/Dashboard";
+import AssignedProjects from "../pages/mentor/AssignedProjects";
+import MentorProfile from "../pages/mentor/Profile";
+
+import AdminDashboard from "../pages/admin/Dashboard";
+import Submissions from "../pages/admin/Submissions";
+import Users from "../pages/admin/Users";
+import Organizations from "../pages/admin/Organizations";
+import Mentors from "../pages/admin/Mentors";
+import Categories from "../pages/admin/Categories";
+import Reports from "../pages/admin/Reports";
+import Settings from "../pages/admin/Settings";
 
 function Placeholder({ title }) {
   return (
@@ -37,64 +63,36 @@ function Placeholder({ title }) {
 export default function AppRoutes() {
   return (
     <Routes>
-
       {/* =========================
           PERSON 1 — PUBLIC
           ========================= */}
 
-      <Route
-        path="/"
-        element={<Home />}
-      />
+      <Route path="/" element={<Home />} />
 
-      <Route
-        path="/explore"
-        element={<Explore />}
-      />
+      <Route path="/explore" element={<Explore />} />
 
       <Route
         path="/projects/:id"
         element={<ProjectDetailsPage />}
       />
 
-      <Route
-        path="/about"
-        element={<About />}
-      />
+      <Route path="/about" element={<About />} />
 
-      <Route
-        path="/faq"
-        element={<FAQ />}
-      />
+      <Route path="/faq" element={<FAQ />} />
 
-      <Route
-        path="/contact"
-        element={<Contact />}
-      />
+      <Route path="/contact" element={<Contact />} />
 
-      <Route
-        path="/privacy"
-        element={<Privacy />}
-      />
+      <Route path="/privacy" element={<Privacy />} />
 
-      <Route
-        path="/terms"
-        element={<Terms />}
-      />
+      <Route path="/terms" element={<Terms />} />
 
       {/* =========================
           PERSON 1 — AUTH
           ========================= */}
 
-      <Route
-        path="/login"
-        element={<Login />}
-      />
+      <Route path="/login" element={<Login />} />
 
-      <Route
-        path="/signup"
-        element={<Signup />}
-      />
+      <Route path="/signup" element={<Signup />} />
 
       <Route
         path="/forgot-password"
@@ -122,9 +120,7 @@ export default function AppRoutes() {
 
       <Route
         path="/student/projects/new"
-        element={
-          <Placeholder title="Create Project" />
-        }
+        element={<Placeholder title="Create Project" />}
       />
 
       <Route
@@ -150,9 +146,7 @@ export default function AppRoutes() {
 
       <Route
         path="/student/mentors"
-        element={
-          <Placeholder title="Mentors" />
-        }
+        element={<Placeholder title="Mentors" />}
       />
 
       <Route
@@ -176,42 +170,72 @@ export default function AppRoutes() {
       <Route
         path="/organization"
         element={
-          <Placeholder title="Organization Dashboard" />
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <OrganizationDashboard />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/organization/projects"
         element={
-          <Placeholder title="Organization Projects" />
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <ExploreProjects />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/organization/saved"
         element={
-          <Placeholder title="Saved Projects" />
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <SavedProjects />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/organization/internships"
         element={
-          <Placeholder title="Internships" />
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <Internships />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/organization/partnerships"
         element={
-          <Placeholder title="Partnerships" />
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <Partnerships />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/organization/profile"
         element={
-          <Placeholder title="Organization Profile" />
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <OrganizationProfile />
+          </DashboardLayout>
         }
       />
 
@@ -222,28 +246,41 @@ export default function AppRoutes() {
       <Route
         path="/mentor"
         element={
-          <Placeholder title="Mentor Dashboard" />
+          <DashboardLayout
+            sidebarItems={mentorNavigation}
+            user={{ name: "Mentor", role: "Mentor" }}
+          >
+            <MentorDashboard />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/mentor/projects"
         element={
-          <Placeholder title="Assigned Projects" />
+          <DashboardLayout
+            sidebarItems={mentorNavigation}
+            user={{ name: "Mentor", role: "Mentor" }}
+          >
+            <AssignedProjects />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/mentor/projects/:id"
-        element={
-          <Placeholder title="Review Project" />
-        }
+        element={<Placeholder title="Review Project" />}
       />
 
       <Route
         path="/mentor/profile"
         element={
-          <Placeholder title="Mentor Profile" />
+          <DashboardLayout
+            sidebarItems={mentorNavigation}
+            user={{ name: "Mentor", role: "Mentor" }}
+          >
+            <MentorProfile />
+          </DashboardLayout>
         }
       />
 
@@ -254,85 +291,100 @@ export default function AppRoutes() {
       <Route
         path="/admin"
         element={
-          <Placeholder title="Admin Dashboard" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <AdminDashboard />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/submissions"
         element={
-          <Placeholder title="Submissions" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Submissions />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/users"
         element={
-          <Placeholder title="Users" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Users />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/organizations"
         element={
-          <Placeholder title="Organizations" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Organizations />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/mentors"
         element={
-          <Placeholder title="Mentors" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Mentors />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/categories"
         element={
-          <Placeholder title="Categories" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Categories />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/reports"
         element={
-          <Placeholder title="Reports" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Reports />
+          </DashboardLayout>
         }
       />
 
       <Route
         path="/admin/settings"
         element={
-          <Placeholder title="Settings" />
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Settings />
+          </DashboardLayout>
         }
       />
 
-      <Route
-        path="*"
-        element={<Navigate to="/" replace />}
-      />
-
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
-  );
-}
-
-function Placeholder({ title }) {
-  return (
-    <div className="flex min-h-[60vh] items-center justify-center">
-      <div className="text-center">
-        <p className="text-sm font-medium text-maroon-700">
-          Technofest
-        </p>
-
-        <h1 className="mt-2 text-2xl font-bold text-gray-900">
-          {title}
-        </h1>
-
-        <p className="mt-2 text-sm text-gray-500">
-          This page will be implemented by another
-          collaborator.
-        </p>
-      </div>
-    </div>
   );
 }
