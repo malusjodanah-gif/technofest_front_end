@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
+import About from "../pages/public/About";
 import Login from "../pages/public/auth/Login";
 import Signup from "../pages/public/auth/Signup";
 
@@ -38,7 +39,7 @@ export default function AppRoutes() {
       />
       <Route
         path="/about"
-        element={<Placeholder title="About" />}
+        element={<About />}
       />
       <Route
         path="/faq"
