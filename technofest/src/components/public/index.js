@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero";
+export { default as FeaturedProjects } from "./FeaturedProjects";
+export { default as CategorySection } from "./CategorySection";
+export { default as StatsSection } from "./StatsSection";
+export { default as SponsorSection } from "./SponsorSection";
+export { default as SearchBar } from "./SearchBar";
+export { default as ProjectFilters } from "./ProjectFilters";
+export { default as ProjectSort } from "./ProjectSort";
+export { default as Pagination } from "./Pagination";
