@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
+  Globe,
   Mail,
+  MessageCircle,
+  Users,
 } from "lucide-react";
 
 const footerLinks = {
@@ -43,26 +43,26 @@ export default function Footer() {
             <div className="mt-5 flex gap-2">
               <a
                 href="#"
-                aria-label="Facebook"
+                aria-label="Community"
                 className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-maroon-700"
               >
-                <Facebook size={18} />
+                <Globe size={18} />
               </a>
 
               <a
                 href="#"
-                aria-label="Instagram"
+                aria-label="Updates"
                 className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-maroon-700"
               >
-                <Instagram size={18} />
+                <MessageCircle size={18} />
               </a>
 
               <a
                 href="#"
-                aria-label="LinkedIn"
+                aria-label="Network"
                 className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-maroon-700"
               >
-                <Linkedin size={18} />
+                <Users size={18} />
               </a>
 
               <a

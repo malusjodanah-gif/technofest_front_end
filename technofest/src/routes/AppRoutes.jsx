@@ -2,6 +2,28 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import Login from "../pages/public/auth/Login";
 import Signup from "../pages/public/auth/Signup";
+import OrganizationDashboard from "../pages/organization/Dashboard";
+import ExploreProjects from "../pages/organization/ExploreProjects";
+import SavedProjects from "../pages/organization/SavedProjects";
+import OrganizationProfile from "../pages/organization/Profile";
+import Internships from "../pages/organization/Internships";
+import Partnerships from "../pages/organization/Partnerships";
+import DashboardLayout from "../components/layout/DashboardLayout";
+import {
+  adminNavigation,
+  mentorNavigation,
+  organizationNavigation,
+} from "../constants/navigation";
+import MentorDashboard from "../pages/mentor/Dashboard";
+import AssignedProjects from "../pages/mentor/AssignedProjects";
+import MentorProfile from "../pages/mentor/Profile";
+import AdminDashboard from "../pages/admin/Dashboard";
+import Submissions from "../pages/admin/Submissions";
+import Users from "../pages/admin/Users";
+import Mentors from "../pages/admin/Mentors";
+import Categories from "../pages/admin/Categories";
+import Reports from "../pages/admin/Reports";
+import Settings from "../pages/admin/Settings";
 
 function Placeholder({ title }) {
   return (
@@ -28,10 +50,7 @@ export default function AppRoutes() {
     <Routes>
       {/* PUBLIC */}
       <Route path="/" element={<Placeholder title="Home" />} />
-      <Route
-        path="/explore"
-        element={<Placeholder title="Explore" />}
-      />
+      <Route path="/explore" element={<Placeholder title="Explore" />} />
       <Route
         path="/projects/:id"
         element={<Placeholder title="Project Details" />}
@@ -102,37 +121,93 @@ export default function AppRoutes() {
       {/* ORGANIZATION */}
       <Route
         path="/organization"
-        element={<Placeholder title="Organization Dashboard" />}
+        element={
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <OrganizationDashboard />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/organization/projects"
-        element={<Placeholder title="Organization Projects" />}
+        element={
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <ExploreProjects />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/organization/saved"
-        element={<Placeholder title="Saved Projects" />}
+        element={
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <SavedProjects />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/organization/internships"
-        element={<Placeholder title="Internships" />}
+        element={
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <Internships />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/organization/partnerships"
-        element={<Placeholder title="Partnerships" />}
+        element={
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <Partnerships />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/organization/profile"
-        element={<Placeholder title="Organization Profile" />}
+        element={
+          <DashboardLayout
+            sidebarItems={organizationNavigation}
+            user={{ name: "Organization", role: "Organization" }}
+          >
+            <OrganizationProfile />
+          </DashboardLayout>
+        }
       />
 
       {/* MENTOR */}
       <Route
         path="/mentor"
-        element={<Placeholder title="Mentor Dashboard" />}
+        element={
+          <DashboardLayout
+            sidebarItems={mentorNavigation}
+            user={{ name: "Mentor", role: "Mentor" }}
+          >
+            <MentorDashboard />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/mentor/projects"
-        element={<Placeholder title="Assigned Projects" />}
+        element={
+          <DashboardLayout
+            sidebarItems={mentorNavigation}
+            user={{ name: "Mentor", role: "Mentor" }}
+          >
+            <AssignedProjects />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/mentor/projects/:id"
@@ -140,21 +215,49 @@ export default function AppRoutes() {
       />
       <Route
         path="/mentor/profile"
-        element={<Placeholder title="Mentor Profile" />}
+        element={
+          <DashboardLayout
+            sidebarItems={mentorNavigation}
+            user={{ name: "Mentor", role: "Mentor" }}
+          >
+            <MentorProfile />
+          </DashboardLayout>
+        }
       />
 
       {/* ADMIN */}
       <Route
         path="/admin"
-        element={<Placeholder title="Admin Dashboard" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <AdminDashboard />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/admin/submissions"
-        element={<Placeholder title="Submissions" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Submissions />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/admin/users"
-        element={<Placeholder title="Users" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Users />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/admin/organizations"
@@ -162,19 +265,47 @@ export default function AppRoutes() {
       />
       <Route
         path="/admin/mentors"
-        element={<Placeholder title="Mentors" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Mentors />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/admin/categories"
-        element={<Placeholder title="Categories" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Categories />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/admin/reports"
-        element={<Placeholder title="Reports" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Reports />
+          </DashboardLayout>
+        }
       />
       <Route
         path="/admin/settings"
-        element={<Placeholder title="Settings" />}
+        element={
+          <DashboardLayout
+            sidebarItems={adminNavigation}
+            user={{ name: "Admin", role: "Admin" }}
+          >
+            <Settings />
+          </DashboardLayout>
+        }
       />
 
       {/* FALLBACK */}
