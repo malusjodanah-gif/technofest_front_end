@@ -1,20 +1,17 @@
 import { useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import { PublicLayout } from "../../components/layout";
+import { PageHeader } from "../../components/layout";
 
-import {
-  Pagination,
-  ProjectFilters,
-  ProjectSort,
-  SearchBar,
-} from "../../components/public";
+import Pagination from "./Pagination";
+import ProjectCard from "../project/ProjectCard";
+import ProjectFilters from "./ProjectFilters";
+import ProjectSort from "./ProjectSort";
+import SearchBar from "./SearchBar";
 
-import {
-  Button,
-  EmptyState,
-  PageHeader,
-} from "../../components/ui";
+import Button from "../ui/Button";
+import EmptyState from "../ui/EmptyState";
 
 import { projects } from "../../data/projects";
 
@@ -172,16 +169,7 @@ export default function Explore() {
                 <>
                   <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
                     {visibleProjects.map((project) => (
-                      <div key={project.id}>
-                        <Link to={`/projects/${project.id}`}>
-                          <div className="h-full">
-                            {/* Existing shared ProjectCard */}
-                            <ProjectCardWrapper
-                              project={project}
-                            />
-                          </div>
-                        </Link>
-                      </div>
+                      <ProjectCard key={project.id} project={project} />
                     ))}
                   </div>
 
@@ -216,10 +204,4 @@ export default function Explore() {
       </div>
     </PublicLayout>
   );
-}
-
-function ProjectCardWrapper({ project }) {
-  const { ProjectCard } = require("../../components/project");
-
-  return <ProjectCard project={project} />;
 }
