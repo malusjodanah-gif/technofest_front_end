@@ -4,7 +4,7 @@ const variants = {
   primary:
     "bg-maroon-700 text-white hover:bg-maroon-800 focus:ring-maroon-300",
   secondary:
-    "bg-beige-200 text-maroon-800 hover:bg-beige-300 focus:ring-beige-400",
+    "border border-maroon-700 bg-white text-maroon-700 hover:bg-maroon-50 focus:ring-maroon-300",
   outline:
     "border border-maroon-700 bg-transparent text-maroon-700 hover:bg-maroon-50 focus:ring-maroon-300",
   ghost:
