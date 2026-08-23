@@ -14,7 +14,7 @@ export default function PageHeader({
       )}
     >
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+        <h1 className="text-2xl font-bold tracking-tight text-maroon-700 sm:text-3xl">
           {title}
         </h1>
 
