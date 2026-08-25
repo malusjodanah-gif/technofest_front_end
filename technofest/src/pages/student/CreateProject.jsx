@@ -312,7 +312,7 @@ export default function CreateProject() {
             <div>
               <h2 style={{ marginTop: 0 }}>Step 7: Declaration</h2>
               <p style={{ color: "#94a3b8", fontSize: "14px" }}>
-                I hereby declare that this project submission represents original work created for TechnoFest 2026.
+                I hereby declare that this project submission represents original work created for Innoject 2026.
               </p>
               <label style={{ display: "flex", alignItems: "center", gap: "8px", cursor: "pointer", marginTop: "16px" }}>
                 <input

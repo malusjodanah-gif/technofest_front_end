@@ -19,7 +19,7 @@ export default function MentorFeedback() {
       date: "2026-08-15",
       status: "Approved",
       section: "Full Proposal",
-      comment: "Excellent technical design. Approved for presentation at TechnoFest 2026.",
+      comment: "Excellent technical design. Approved for presentation at Innoject 2026.",
       isResolved: true,
     },
   ]);

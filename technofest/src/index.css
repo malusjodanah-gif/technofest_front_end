@@ -26,6 +26,26 @@ body {
   margin: 0;
 }
 
+/* Keeps legacy student screens on the same light palette as the shared workspace. */
+.student-workspace [style*="#0f172a"] {
+  background-color: #fafaf8 !important;
+  color: #222222 !important;
+}
+
+.student-workspace [style*="#1e293b"] {
+  background-color: #ffffff !important;
+}
+
+.student-workspace [style*="#334155"] {
+  background-color: #f5ebdd !important;
+  border-color: #eadbc5 !important;
+  color: #680000 !important;
+}
+
+.student-workspace [style*="#94a3b8"] {
+  color: #6b7280 !important;
+}
+
 #root {
   min-height: 100svh;
 }

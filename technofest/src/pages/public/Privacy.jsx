@@ -16,7 +16,7 @@ export default function Privacy() {
             </h2>
 
             <p className="mt-2">
-              Technofest is designed to give users clear
+              Innoject is designed to give users clear
               information about how their account and project
               information is used.
             </p>

@@ -77,6 +77,11 @@ export const organizationNavigation = [
     to: "/organization/profile",
     icon: User,
   },
+  {
+    label: "Notifications",
+    to: "/organization/notifications",
+    icon: Bell,
+  },
 ];
 
 export const mentorNavigation = [
@@ -94,6 +99,11 @@ export const mentorNavigation = [
     label: "Profile",
     to: "/mentor/profile",
     icon: User,
+  },
+  {
+    label: "Notifications",
+    to: "/mentor/notifications",
+    icon: Bell,
   },
 ];
 
@@ -137,5 +147,10 @@ export const adminNavigation = [
     label: "Settings",
     to: "/admin/settings",
     icon: Settings,
+  },
+  {
+    label: "Notifications",
+    to: "/admin/notifications",
+    icon: Bell,
   },
 ];

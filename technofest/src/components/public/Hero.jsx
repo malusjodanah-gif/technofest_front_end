@@ -10,7 +10,7 @@ export default function Hero() {
         
         <div>
           <span className="inline-flex rounded-full bg-maroon-100 px-3 py-1 text-sm font-semibold text-maroon-800">
-            Student Innovation Platform
+            Digital Platform for Showcasing Student Innovation
           </span>
 
           <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
@@ -18,9 +18,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
-            Technofest connects student innovators, organizations,
-            mentors, and communities through one platform for
-            discovering and showcasing innovation.
+            Innoject connects student innovators, organizations,
+            mentors, and communities through one digital platform for
+            showcasing student innovation.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

@@ -7,11 +7,12 @@ export default function DashboardLayout({
   children,
   sidebarItems = [],
   user = null,
+  className = "",
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen bg-gray-50 ${className}`}>
       <div className="flex min-h-screen">
         <Sidebar
           items={sidebarItems}
